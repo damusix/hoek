@@ -11,21 +11,24 @@ export interface IntersectOptions {
     readonly first?: boolean;
 }
 
-interface intersect {
-    <T1 extends IntersectArray<any>, T2 extends IntersectArray<any>> (
-        array1: T1,
-        array2: T2
-    ): T1 | T2 | null;
-    <T1, T2> (
-        array1: IntersectArray<T1>,
-        array2: IntersectArray<T2>,
-        options: { first: true }
-    ): T1 | T2 | null;
-}
+export function intersect<T1, T2>(
+    array1: IntersectArray<T1>,
+    array2: IntersectArray<T2>,
+    options: { first: true }
+): T1 | T2 | null;
 
-export function intersect<T1 extends IntersectArray<any>, T2 extends IntersectArray<any>>(
+export function intersect<
+    T1 extends IntersectArray<any>,
+    T2 extends IntersectArray<any>,
+>(
     array1: T1,
     array2: T2,
+    options?: IntersectOptions
+): T1 | T2 | null;
+
+export function intersect(
+    array1: any,
+    array2: any,
     options: IntersectOptions = {}
 ) {
 
@@ -38,7 +41,7 @@ export function intersect<T1 extends IntersectArray<any>, T2 extends IntersectAr
     const hash = (Array.isArray(array1) ? new Set(array1) : array1);
     const found = new Set();
 
-    for (const value of (array2 as Iterable<T2>)) {
+    for (const value of (array2 as Iterable<any>)) {
 
         if (
             has(hash, value as never) &&
@@ -55,7 +58,7 @@ export function intersect<T1 extends IntersectArray<any>, T2 extends IntersectAr
     }
 
     return (options.first ? null : common);
-};
+}
 
 
 const has = function (ref: NonNullable<IntersectArray<any>>, key: string) {

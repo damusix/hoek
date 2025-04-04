@@ -3,8 +3,8 @@ import Code from '@hapi/code';
 import { describe, it } from 'node:test';
 
 
-import * as Hoek from '../lib';
-import { MergeTypes } from '../lib/merge';
+import * as Hoek from '../lib/index.ts';
+import { MergeTypes } from '../lib/merge.ts';
 
 const expect = Code.expect;
 

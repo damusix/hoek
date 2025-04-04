@@ -1,6 +1,6 @@
-import { assert } from './assert.js';
-import { clone } from './clone.js';
-import * as Utils from './utils.js';
+import { assert } from './assert.ts';
+import { clone } from './clone.ts';
+import * as Utils from './utils.ts';
 
 export type MergeTypes<T1, T2> = {
     [K in keyof T1]: K extends keyof T2 ? T2[K] | T1[K] : T1[K];

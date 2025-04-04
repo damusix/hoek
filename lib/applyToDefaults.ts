@@ -1,7 +1,7 @@
-import { assert } from './assert.js';
-import { clone, ShallowKeys } from './clone.js';
-import { merge } from './merge.js';
-import { reach } from './reach.js';
+import { assert } from './assert.ts';
+import { clone, type ShallowKeys } from './clone.ts';
+import { merge } from './merge.ts';
+import { reach } from './reach.ts';
 
 export type ApplyToDefaultsOptions = {
     /**

@@ -1,4 +1,4 @@
-import { reach, ReachOptions } from './reach.js';
+import { reach, type ReachOptions } from './reach.ts';
 
 /**
  * Replace string parameters (using format "{path.to.key}") with their corresponding object key values using `Hoek.reach()`.

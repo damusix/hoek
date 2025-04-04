@@ -1,7 +1,7 @@
 import Code from '@hapi/code';
 import { describe, it } from 'node:test';
 
-import * as Hoek from '../lib';
+import * as Hoek from '../lib/index.ts';
 
 const expect = Code.expect;
 

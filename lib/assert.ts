@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { stringify } from './stringify.js';
-import { AssertError } from './assertError.js';
+import { stringify } from './stringify.ts';
+import { AssertError } from './assertError.ts';
 
 // eslint-disable-next-line func-style -- https://github.com/microsoft/TypeScript/issues/34523
 export function assert <T>(condition: T, ...args: ({ toString: () => string } | Error)[]): asserts condition {

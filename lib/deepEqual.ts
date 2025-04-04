@@ -1,4 +1,4 @@
-import { prototypes, AnyPrototype, getInternalProto } from './types.js';
+import { prototypes, type AnyPrototype, getInternalProto } from './types.ts';
 
 const internals = {
     mismatched: null

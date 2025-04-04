@@ -1,8 +1,8 @@
 /* eslint-disable func-style */
-import { assert as Assert } from './assert.js';
-import { deepEqual as DeepEqual } from './deepEqual.js';
-import { escapeRegex } from './escapeRegex.js';
-import * as Utils from './utils.js';
+import { assert as Assert } from './assert.ts';
+import { deepEqual as DeepEqual } from './deepEqual.ts';
+import { escapeRegex } from './escapeRegex.ts';
+import * as Utils from './utils.ts';
 
 // Partial one or many
 type PartOOM<T> = Partial<T> | Partial<T>[];

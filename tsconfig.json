@@ -18,12 +18,12 @@
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "exactOptionalPropertyTypes": true,
+        "allowImportingTsExtensions": true,
+        "rewriteRelativeImportExtensions": true,
+        "noEmit": true
     },
     "include": [
         "lib",
         "test"
-    ],
-    "ts-node": {
-        "esm": true
-    }
+    ]
 }
